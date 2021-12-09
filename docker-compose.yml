@@ -8,7 +8,7 @@ services:
     image: Parcial-Software
     container_name: app
     restart: unless-stopped
-    volumens:
+    volumes:
       - ./:/var/www
 
   webserver:
