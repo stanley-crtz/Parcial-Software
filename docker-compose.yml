@@ -25,7 +25,7 @@ services:
       - ./config/nginx/:/etc/nginx/conf.d/
     depends_on:
       - app
-      
+
   db:
     image: mysql:5.7.22
     container_name: db
@@ -36,6 +36,6 @@ services:
       - "3607:3606"
     volumes:
       - dbdata:/var/lib/mysql
-  volumes:
+volumes:
     dbdata:
       drive: local
