@@ -33,7 +33,7 @@ services:
       MYSQL_DATABASE: parcial
       MYSQL_ROOT_PASSWORD: r00tadmin
     ports:
-      - "3607:3606"
+      - "3307:3306"
     volumes:
       - dbdata:/var/lib/mysql
 volumes:
