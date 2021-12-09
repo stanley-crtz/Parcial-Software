@@ -8,8 +8,8 @@ RUN apk update && apk add \
 
 RUN docker-php-ext-install pdo_mysql
 
-RUN addgroup -g 1000 -s www && \
-    adduser -u 1000 -s www -G www 
+RUN addgroup -g 1000 -S www && \
+    adduser -u 1000 -S www -G www 
 
 USER www
 
