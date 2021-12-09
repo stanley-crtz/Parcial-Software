@@ -13,6 +13,6 @@ RUN addgroup -g 1000 -S www && \
 
 USER www
 
-COPY --chown=www:wwww . /var/www 
+COPY --chown=www:www . /var/www 
 
 EXPOSE 9000
