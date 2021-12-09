@@ -25,3 +25,17 @@ services:
       - ./config/nginx/:/etc/nginx/conf.d/
     depends_on:
       - app
+      
+  db:
+    image: mysql:5.7.22
+    container_name: db
+    environment:
+      MYSQL_DATABASE: parcial
+      MYSQL_ROOT_PASSWORD: r00tadmin
+    ports:
+      - "3607:3606"
+    volumes:
+      - dbdata:/var/lib/mysql
+  volumes:
+    dbdata:
+      drive: local
