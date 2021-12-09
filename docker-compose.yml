@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: Parcial-Software
+    image: parcial-software
     container_name: app
     restart: unless-stopped
     volumes:
