@@ -38,4 +38,4 @@ services:
       - dbdata:/var/lib/mysql
 volumes:
     dbdata:
-      drive: local
+      driver: local
