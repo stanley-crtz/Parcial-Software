@@ -12,26 +12,45 @@ $result = $command->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/slate/bootstrap.min.css">
 </head>
 
 <body>
-    <h2>Test Connect</h2>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Parcial - Software Libre</a>
+    </nav>
 
-    <?php
-        foreach ($result as $row) {
-    ?>
-            <h3><?php echo $row['fullName']; ?></h3>
-    <?php 
-        } 
-    ?>
+    <div class="container mt-2">
+        <div class="d-flex justify-content-between">
+            <h1>Integrantes:</h1>
+            <button type="button" class="btn btn-secondary" id="button">Agregar Miembro</button>
+        </div>
+        <div class="container">
+            <div class="d-flex flex-wrap" id="members">
+
+                <?php
+                foreach ($result as $row) {
+                ?>
+                    <div class="alert alert-dismissible alert-primary m-2">
+                        <?php echo $row['fullName']; ?>
+                    </div>
+                <?php
+                }
+                ?>
+
+            </div>
+        </div>
+    </div>
+    <script src="/Home/index.js"></script>
 </body>
 
 </html>
