@@ -23,11 +23,16 @@
 
         public function getUsers()
         {
-            $stmt = $this->db->prepare("SELECT * FROM 'users' ");
+            $query = "SELECT * FROM users";
+            $stmt = $this->db->query($query);
 
-            $stmt->execute();
+            $send = [];
 
-            return $stmt->fetch(PDO::FETCH_OBJ);
+            foreach ($stmt as $row) {
+                array_push($send, $row);
+            }
+
+            return $send;
         }
 
         public function hash($password)
