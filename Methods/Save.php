@@ -10,7 +10,7 @@ $fullName = $_POST['fullName'];
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-$query = $con->prepare("INSERT INTO users (fullName, email, 'password') VALUES (:full, :email, :pass)");
+$query = $con->prepare("INSERT INTO users (fullName, email, password) VALUES (:full, :email, :pass)");
 $resultado = $query->execute(array('full' => $fullName, 'email' => $email, 'pass' => $password));
 
 if ($resultado) {
