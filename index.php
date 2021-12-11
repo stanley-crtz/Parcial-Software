@@ -6,7 +6,7 @@ $db = new Database();
 
 $conn = $db->connect();
 
-$command = $conn->prepare("SELECT * FROM 'users'");
+$command = $conn->prepare("SELECT * FROM users");
 $command->execute();
 $result = $command->fetchAll(PDO::FETCH_ASSOC);
 
