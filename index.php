@@ -25,12 +25,12 @@ $result = $command->fetchAll(PDO::FETCH_ASSOC);
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-2">
         <a class="navbar-brand" href="#">Parcial - Software Libre</a>
     </nav>
 
     <div class="container mt-2">
-        <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-between p-2">
             <h1>Integrantes:</h1>
             <button type="button" class="btn btn-secondary" id="button">Agregar Miembro</button>
         </div>
@@ -50,7 +50,7 @@ $result = $command->fetchAll(PDO::FETCH_ASSOC);
             </div>
         </div>
     </div>
-    <script src="/Home/index.js"></script>
+    <script src="JS/Home.js"></script>
 </body>
 
 </html>
