@@ -14,4 +14,6 @@
 
     $validate = new Validate;
 
+    $userOBJ = new User;
+
 ?>
