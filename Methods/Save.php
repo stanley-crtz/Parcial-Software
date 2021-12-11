@@ -11,8 +11,8 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 
 
-$query = $con->prepare("INSERT INTO users (fullName, email, password) VALUES (:name, :email, :pass)");
-$resultado = $query->execute(array('name' => $$fullName, 'email' => $email, 'pass' => $password));
+$query = $con->prepare("INSERT INTO users (fullName, email, password) VALUES (:fullName, :email, :password)");
+$resultado = $query->execute(array('fullName' => $$fullName, 'email' => $email, 'password' => $password));
 
 if ($resultado) {
     $correcto = true;
