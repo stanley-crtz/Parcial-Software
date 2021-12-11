@@ -5,7 +5,7 @@
         
         protected $db;
 
-        public function __contruct()
+        protected function __construct()
         {
             $this->db = Database::instance();
         } 
