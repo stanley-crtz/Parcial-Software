@@ -1,6 +1,6 @@
 <?php 
 
     include "../Connect/DB.php";
-    $conexion = new DB('localhost:3307','root','r00tadmin','parcial');
+    $conexion = new DB('localhost','root','r00tadmin','parcial');
 
 ?>
