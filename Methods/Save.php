@@ -10,15 +10,19 @@ $fullName = $_POST['fullName'];
 $email = $_POST['email'];
 $password = $_POST['password'];
 
+echo $fullName;
+echo $email;
+echo $password;
 
-$query = $con->prepare("INSERT INTO users (fullName, email, password) VALUES (:fullName, :email, :password)");
-$resultado = $query->execute(array('fullName' => $$fullName, 'email' => $email, 'password' => $password));
 
-if ($resultado) {
-    $correcto = true;
-}
+// $query = $con->prepare("INSERT INTO users (fullName, email, password) VALUES (:fullName, :email, :password)");
+// $resultado = $query->execute(array('fullName' => $$fullName, 'email' => $email, 'password' => $password));
+
+// if ($resultado) {
+//     $correcto = true;
+// }
 ?>
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -52,4 +56,4 @@ if ($resultado) {
 
 </body>
 
-</html>
+</html> -->
