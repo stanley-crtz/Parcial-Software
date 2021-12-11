@@ -28,26 +28,22 @@ if ($resultado) {
     <link rel="stylesheet" href="Styles/bootstrap.min.css">
 </head>
 
-<body class="py-3">
-    <main class="container">
-        <div class="p-3 rounded">
-            <div class="row">
-                <div class="col">
-                    <?php if ($correcto) { ?>
-                        <h3>Registro guardado</h3>
-                    <?php } else { ?>
-                        <h3>Error al guardar</h3>
-                    <?php }  ?>
-                </div>
-            </div>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-2">
+        <a class="navbar-brand" href="#">Software Libre / Registro</a>
+    </nav>
 
-            <div class="row">
-                <div class="col">
-                    <a class="btn btn-primary" href="/">Regresar</a>
-                </div>
-            </div>
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <?php if ($correcto) { ?>
+                <button type="button" class="btn btn-primary" id="return">Regresar</button>
+            <?php } else { ?>
+                <h2>Error en el servidor</h2>
+            <?php }  ?>
         </div>
-    </main>
+    </div>
+
+    <script src="../JS/Save.js"></script>
 
 </body>
 
