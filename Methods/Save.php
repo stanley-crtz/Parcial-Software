@@ -36,7 +36,7 @@ if ($resultado) {
     <div class="container">
         <div class="d-flex justify-content-center">
             <?php if ($correcto) { ?>
-                <button type="button" class="btn btn-primary" id="return">Regresar</button>
+                <button type="button" class="btn btn-primary mt-2" id="return">Regresar</button>
             <?php } else { ?>
                 <h2>Error en el servidor</h2>
             <?php }  ?>
