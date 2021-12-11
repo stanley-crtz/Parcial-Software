@@ -5,7 +5,7 @@
         public $pdo;
         public static $instance;
         
-        protected function _construct() {
+        protected function __construct() {
             $this->pdo = new PDO("mysql:host=".DB_HOST."; dbname=".DB_NAME, DB_USER, DB_PASS);
         }
 
@@ -19,7 +19,7 @@
 
         }
 
-        public function _call($method, $args)
+        public function __call($method, $args)
         {
 
             var_dump($method);
