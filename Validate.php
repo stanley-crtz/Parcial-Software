@@ -18,6 +18,11 @@
             return filter_var($email, FILTER_VALIDATE_EMAIL);
         }
 
+        public function myClass()
+        {
+            return "Chepe es gay";
+        }
+
     }
     
 
