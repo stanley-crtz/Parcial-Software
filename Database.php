@@ -2,10 +2,10 @@
 
     class Database
     {
-        public $pdo;
-        public static $instance;
+        protected $pdo;
+        protected static $instance;
         
-        public function __construct() {
+        protected function __construct() {
             $this->pdo = new PDO("mysql:host=".DB_HOST."; dbname=".DB_NAME, DB_USER, DB_PASS);
         }
 
@@ -22,7 +22,6 @@
         public function __call($method, $args)
         {
 
-            var_dump($method);
 
         }
 
