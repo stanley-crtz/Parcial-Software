@@ -20,6 +20,8 @@ class Database
 
             $pdo = new PDO($conexion, $this->username, $this->password, $options);
 
+            echo 'Conection success';
+
             return $pdo;
         } catch (PDOException $e) {
             echo 'Error conexion: ' . $e->getMessage();
