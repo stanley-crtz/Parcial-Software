@@ -2,6 +2,6 @@
 
     include "init.php";
 
-    echo $validate->myClass();
+    echo $user->getUser();
 
 ?>

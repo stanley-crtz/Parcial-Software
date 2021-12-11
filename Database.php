@@ -19,6 +19,17 @@
 
         }
 
+        public function getUser()
+        {
+            $query = $this->pdo->prepare("SELECT * FROM 'users'");
+
+            $query->execute();
+            
+            $results = $query->fetchAll(PDO::FETCH_OBJ);
+
+            return $results;
+        }
+
         public function __call($method, $args)
         {
 
