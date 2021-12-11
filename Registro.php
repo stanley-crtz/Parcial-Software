@@ -22,17 +22,17 @@
                     <legend>Agrega un integrante</legend>
                     <div class="form-group">
                         <label for="member" class="form-label mt-4">Integrante</label>
-                        <input type="text" name="fullName" class="form-control" id="member" aria-describedby="member" placeholder="Jose Serpas">
+                        <input type="text" name="fullName" class="form-control" id="fullName" aria-describedby="member" placeholder="Jose Serpas">
                         <small id="member" class="form-text text-muted">Ingresa el nombre del integrante</small>
                     </div>
                     <div class="form-group">
                         <label for="member" class="form-label mt-4">Correo Electronico</label>
-                        <input type="email" name="email" class="form-control" id="member" aria-describedby="member" placeholder="jose@gmail.com">
+                        <input type="email" name="email" class="form-control" id="email" aria-describedby="member" placeholder="jose@gmail.com">
                         <small id="member" class="form-text text-muted">Ingresa el correo</small>
                     </div>
                     <div class="form-group">
                         <label for="member" class="form-label mt-4">Contraseña</label>
-                        <input type="password" name="password" class="form-control" id="member" aria-describedby="member" placeholder="Jose Serpas">
+                        <input type="password" name="password" class="form-control" id="password" aria-describedby="member" placeholder="Jose Serpas">
                         <small id="member" class="form-text text-muted">Ingresa la contraseña</small>
                     </div>
                     <button type="submit" class="btn btn-primary">Agregar</button>
