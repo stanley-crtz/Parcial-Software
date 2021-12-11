@@ -1,40 +1,29 @@
 <?php
 
-    class Database
+class Database
+{
+    private $hostname = "db";
+    private $database = "parcial";
+    private $username = "root";
+    private $password = "r00tadmin";
+    private $charset = "utf8";
+
+    function connect()
     {
-        protected $pdo;
-        protected static $instance;
-        
-        protected function __construct() {
-            $this->pdo = new PDO("mysql:host=".DB_HOST."; dbname=".DB_NAME, DB_USER, DB_PASS);
+        try {
+
+            $conexion = "mysql:host=" . $this->hostname . ";dbname=" . $this->database . ";charset=" . $this->charset;
+            $options = [
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                PDO::ATTR_EMULATE_PREPARES => false,
+            ];
+
+            $pdo = new PDO($conexion, $this->username, $this->password, $options);
+
+            return $pdo;
+        } catch (PDOException $e) {
+            echo 'Error conexion: ' . $e->getMessage();
+            exit;
         }
-
-        public static function instance() {
-
-            if (self::$instance === null) {
-                self::$instance = new self;
-            }
-
-            return self::$instance;
-
-        }
-
-        public function getUser()
-        {
-            $query = $this->pdo->prepare("SELECT * FROM 'users'");
-
-            $query->execute();
-            
-            $results = $query->fetchAll(PDO::FETCH_OBJ);
-
-            return $results;
-        }
-
-        public function __call($method, $args)
-        {
-
-            call_user_func_array(array($this->pdo, $method), $args);
-
-        }
-
     }
+}
