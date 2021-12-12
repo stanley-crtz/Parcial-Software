@@ -2,7 +2,7 @@
 
 class Database
 {
-    private $hostname = "dbtest";
+    private $hostname = "db";
     private $database = "parcial";
     private $username = "root";
     private $password = "r00tadmin";

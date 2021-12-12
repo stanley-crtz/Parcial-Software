@@ -28,7 +28,7 @@ services:
 
   db:
     image: mysql:5.7.22
-    container_name: dbtest
+    container_name: db
     environment:
       MYSQL_DATABASE: parcial
       MYSQL_ROOT_PASSWORD: r00tadmin
